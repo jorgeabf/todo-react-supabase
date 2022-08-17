@@ -1,13 +1,62 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+   --text: hsl(0, 0%, 30%);
+   --white: hsl(0, 0%, 100%);
+   --primary: hsl(10 50% 50%);
+   --font-family: -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      'Roboto',
+      'Oxygen',
+      'Ubuntu',
+      'Cantarell',
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+   --border-radius: .3em;
+   --border: .125em solid var(--primary);
+
+   --font-size: 16px;
+}
+
+body {
+   margin: 0;
+   font-family: var(--font-family);
+   font-size: var(--font-size);
+   color: var(--text);
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+   padding: 0.5em 2em;
+   border: var(--border);
+   border-radius: var(--border-radius);
+   font-family: var(--font-family);
+   font-size: var(--font-size);
+   font-weight: bold;
+   background-color: var(--white);
+   color: var(--primary);
+   cursor: pointer;
+   transition: color .15s, background-color .2s;
+}
+
+button:is(:hover, :active, :focus) {
+   background-color: var(--primary);
+   color: var(--white);
+}
+
+input {
+   margin-top: 1em;
+   padding: .5em 1em;
+   border: .125em solid var(--text);
+   border-radius: var(--border-radius);
+   font-family: var(--font-family);
+   font-size: var(--font-size);
 }
