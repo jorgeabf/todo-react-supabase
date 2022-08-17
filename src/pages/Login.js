@@ -23,15 +23,18 @@ function Login() {
   }, [navigate]);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="email"
-        name="email"
-        placeholder="youremail@site.com"
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <button>Send</button>
-    </form>
+    <>
+      <h1>Login Page</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="email"
+          name="email"
+          placeholder="youremail@site.com"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button>Send</button>
+      </form>
+    </>
   );
 }
 

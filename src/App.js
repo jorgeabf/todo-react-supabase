@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Page404 from "./pages/Page404";
 
 import { supabase } from "./supabase/client";
+import { TasksContextProvider } from "./context/TasksContext";
 
 function App() {
   const navigate = useNavigate();
@@ -27,11 +28,13 @@ function App() {
 
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="*" element={<Page404 />} />
-      </Routes>
+      <TasksContextProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="*" element={<Page404 />} />
+        </Routes>
+      </TasksContextProvider>
     </div>
   );
 }
