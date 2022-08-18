@@ -12,6 +12,7 @@ import Page404 from "./pages/Page404";
 
 import { supabase } from "./supabase/client";
 import { TasksContextProvider } from "./context/TasksContext";
+import Navbar from './components/Navbar'
 
 function App() {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ function App() {
   return (
     <div className="App">
       <TasksContextProvider>
+         <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
