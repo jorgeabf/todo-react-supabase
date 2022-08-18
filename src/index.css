@@ -6,7 +6,7 @@
 
 :root {
    --bg-05: hsl(210, 33%, 5%);
-   --bg-10: hsl(210, 33%, 10%);
+   --bg-10: hsl(208, 33%, 10%);
    --bg-15: hsl(210, 33%, 15%);
    --bg-20: hsl(210, 33%, 20%);
    --bg-25: hsl(210, 33%, 25%);
@@ -86,6 +86,7 @@ input:focus {
 .task-card {
    padding: 1em;
    border-radius: var(--border-radius);
+   text-transform: capitalize;
    background: var(--bg-20);
    display: grid;
    gap: 1em;

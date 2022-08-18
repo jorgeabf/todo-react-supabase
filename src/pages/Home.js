@@ -16,7 +16,7 @@ function Home() {
 
   return (
     <div>
-      <div class="container-90">
+      <div className="container-90">
         <main>
           <div className="tasks-filter">
             <h2 className="tasks-filter__title">
