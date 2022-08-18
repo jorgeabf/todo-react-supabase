@@ -1,3 +1,83 @@
-.App {
-  text-align: center;
+header {
+   background-color: var(--bg-05);
+}
+
+.nav-link {
+   color: var(--text);
+   text-decoration: none;
+}
+
+.nav-link--title {
+   font-size: calc(var(--font-size) * 1.75);
+}
+
+.navbar {
+   width: 100%;
+   padding-block: 1em;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.tasks-filter {
+   margin-bottom: 4em;
+   display: flex;
+   align-items: center;
+   gap: 1em;
+}
+
+.tasks-filter__title {
+   text-transform: uppercase;
+}
+
+.button-group {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1em;
+}
+
+.button {
+   padding: 0.5em 1em;
+   border: var(--border);
+   border-radius: var(--border-radius);
+   outline: none;
+   text-decoration: none;
+   font-family: var(--font-family);
+   font-size: var(--font-size);
+   font-weight: bold;
+   background-color: var(--bg-dark);
+   color: var(--primary);
+   cursor: pointer;
+   transition: color .15s, background-color .2s;
+}
+
+.button:is(:hover, :active, :focus) {
+   background-color: var(--primary);
+   color: var(--bg-10);
+}
+
+.buttonDelete,
+.buttonDone {
+   color: white;
+   border: none;
+   opacity: .85;
+}
+
+.buttonDelete {
+   background-color: hsl(0, 70%, 35%);
+}
+
+.buttonDelete:is(:hover, :active, :focus) {
+   background-color: hsl(0, 70%, 50%);
+   color: white;
+}
+
+.buttonDone {
+   background-color: hsl(120, 70%, 25%);
+}
+
+.buttonDone:is(:hover, :active, :focus) {
+   background-color: hsl(120, 70%, 40%);
+   color: white;
 }
