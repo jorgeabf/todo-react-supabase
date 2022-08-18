@@ -5,9 +5,10 @@
 }
 
 :root {
-   --bg-color: hsl(210, 33%, 20%);
-   --bg-dark: hsl(210, 33%, 15%);
-   --bg-light: hsl(210, 33%, 25%);
+   --bg-10: hsl(210, 33%, 10%);
+   --bg-15: hsl(210, 33%, 15%);
+   --bg-20: hsl(210, 33%, 20%);
+   --bg-25: hsl(210, 33%, 25%);
    --text: hsl(210, 33%, 85%);
    --white: hsl(210, 33%, 95%);
    --primary: hsl(10 70% 50%);
@@ -28,26 +29,44 @@
    --border: .125em solid var(--primary);
 
    --font-size: 16px;
-   --max-width: 60rem;
+   --max-width: 80rem;
 }
 
 body {
-   margin: 0 auto;
-   padding: 0 5%;
+   margin: 0;
    font-family: var(--font-family);
    font-size: var(--font-size);
-   background-color: var(--bg-dark);
+   background-color: var(--bg-10);
    color: var(--text);
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-   max-width: var(--max-width);
+
 }
 
-header {
-   margin-bottom: 3em;
+.container-90 {
+   max-width: var(--max-width);
+   margin-inline: auto;
+   padding: 1em;
    display: flex;
    align-items: center;
    justify-content: space-between;
+}
+
+header {
+   background-color: var(--bg-15);
+}
+
+.nav-link {
+   color: var(--text);
+   text-decoration: none;
+}
+
+.nav-link--title {
+   font-size: calc(var(--font-size) * 2);
+}
+
+main {
+   padding: 5em 1em;
 }
 
 button {
@@ -70,7 +89,6 @@ button:is(:hover, :active, :focus) {
 }
 
 input {
-   margin-top: 1em;
    padding: .5em 1em;
    border: var(--border);
    border-radius: var(--border-radius);
@@ -101,5 +119,18 @@ li {
    padding: 1em;
    border: var(--border);
    border-radius: var(--border-radius);
-   background:var(--bg-color)
+   background: var(--bg-20)
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin-top: 0;
+}
+
+h1 {
+   margin-bottom: 0;
 }
