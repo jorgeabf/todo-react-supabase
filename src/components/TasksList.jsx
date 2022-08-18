@@ -16,7 +16,7 @@ function TasksList({done=false}) {
       return <p>No tasks found</p>;
     } else {
       return (
-        <ul>
+        <ul className="tasks-list">
           {tasks.map((task) => (
             <TaskCard task={task} key={task.id} />
           ))}
@@ -25,7 +25,7 @@ function TasksList({done=false}) {
     }
   }
 
-  return <div className="tasks-list">{renderTasks()}</div>;
+  return <div>{renderTasks()}</div>;
 }
 
 export default TasksList;

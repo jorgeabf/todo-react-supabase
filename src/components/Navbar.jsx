@@ -5,20 +5,23 @@ function Navbar() {
   return (
     <header>
       <div className="container-90">
-        <NavLink to="/">
-          <a className="nav-link nav-link--title">
+        <nav className="navbar">
+          <NavLink
+            to="/"
+            className="nav-link nav-link--title"
+          >
             Tasks App
-          </a>
-        </NavLink>
-        <a
-          className="nav-link"
-          href="#!"
-          onClick={async () =>
-            await supabase.auth.signOut()
-          }
-        >
-          Logout
-        </a>
+          </NavLink>
+          <NavLink
+            className="button buttonDelete"
+            to="/"
+            onClick={async () =>
+              await supabase.auth.signOut()
+            }
+          >
+            Logout
+          </NavLink>
+        </nav>
       </div>
     </header>
   );

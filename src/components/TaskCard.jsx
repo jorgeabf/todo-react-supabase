@@ -12,14 +12,14 @@ function TaskCard({ task }) {
   };
 
   return (
-    <li>
-      <h3>{`${task.id}. ${task.name}`}</h3>
+    <li className="task-card">
+      <h3>{task.name}</h3>
       <p>{task.done ? "Done ✅" : "Not done ❌"}</p>
       <div className="button-group">
-        <button onClick={() => handleDelete()}>
+        <button className="button buttonDelete" onClick={() => handleDelete()}>
           Delete
         </button>
-        <button onClick={() => handleToggleDone()}>
+        <button className="button buttonDone" onClick={() => handleToggleDone()}>
           Done
         </button>
       </div>

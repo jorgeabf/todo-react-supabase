@@ -5,15 +5,16 @@
 }
 
 :root {
-   --bg-10: hsl(210, 33%, 10%);
+   --bg-05: hsl(210, 33%, 5%);
+   --bg-10: hsl(208, 33%, 10%);
    --bg-15: hsl(210, 33%, 15%);
    --bg-20: hsl(210, 33%, 20%);
    --bg-25: hsl(210, 33%, 25%);
    --text: hsl(210, 33%, 85%);
    --white: hsl(210, 33%, 95%);
-   --primary: hsl(10 70% 50%);
-   --primary-dark: hsl(10 70% 40%);
-   --primary-light: hsl(10 70% 60%);
+   --primary: hsl(210 50% 50%);
+   --primary-dark: hsl(210 50% 40%);
+   --primary-light: hsl(210 50% 60%);
    --font-family: -apple-system,
       BlinkMacSystemFont,
       'Segoe UI',
@@ -29,7 +30,7 @@
    --border: .125em solid var(--primary);
 
    --font-size: 16px;
-   --max-width: 80rem;
+   --max-width: 70rem;
 }
 
 body {
@@ -44,48 +45,17 @@ body {
 }
 
 .container-90 {
+   width: 90%;
    max-width: var(--max-width);
    margin-inline: auto;
-   padding: 1em;
    display: flex;
    align-items: center;
-   justify-content: space-between;
-}
-
-header {
-   background-color: var(--bg-15);
-}
-
-.nav-link {
-   color: var(--text);
-   text-decoration: none;
-}
-
-.nav-link--title {
-   font-size: calc(var(--font-size) * 2);
+   justify-content: center;
 }
 
 main {
-   padding: 5em 1em;
-}
-
-button {
-   padding: 0.5em 2em;
-   border: var(--border);
-   border-radius: var(--border-radius);
-   outline: none;
-   font-family: var(--font-family);
-   font-size: var(--font-size);
-   font-weight: bold;
-   background-color: var(--bg-dark);
-   color: var(--primary);
-   cursor: pointer;
-   transition: color .15s, background-color .2s;
-}
-
-button:is(:hover, :active, :focus) {
-   background-color: var(--primary);
-   color: var(--white);
+   width: 100%;
+   padding-block: 4em;
 }
 
 input {
@@ -103,23 +73,23 @@ input:focus {
    background-color: var(--white);
 }
 
-ul {
+.tasks-list {
+   width: 100%;
    padding: 0;
-   margin: 3em 0 0;
-   text-align: left;
-   width: fit-content;
-   margin-inline: auto;
+   margin: 2em 0;
    list-style: none;
    display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
    gap: 1em;
-   grid-template-columns: repeat(2, 1fr);
 }
 
-li {
+.task-card {
    padding: 1em;
-   border: var(--border);
    border-radius: var(--border-radius);
-   background: var(--bg-20)
+   text-transform: capitalize;
+   background: var(--bg-20);
+   display: grid;
+   gap: 1em;
 }
 
 h1,
@@ -128,9 +98,5 @@ h3,
 h4,
 h5,
 h6 {
-   margin-top: 0;
-}
-
-h1 {
-   margin-bottom: 0;
+   margin: 0;
 }

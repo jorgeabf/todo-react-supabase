@@ -16,22 +16,25 @@ function Home() {
 
   return (
     <div>
-      <main>
-        <TasksForm />
-        <div className="pending">
-          <span>
-            {showTaskDone ? "Task done" : "Task to do"}
-          </span>
-          <button
-            onClick={() => setShowTaskDone(!showTaskDone)}
-          >
-            {showTaskDone
-              ? "Show task to do"
-              : "Show tasks done"}
-          </button>
-        </div>
-        <TasksList done={showTaskDone} />
-      </main>
+      <div className="container-90">
+        <main>
+          <div className="tasks-filter">
+            <h2 className="tasks-filter__title">
+              {showTaskDone ? "Tasks done" : "Tasks to do"}
+            </h2>
+            <button
+              className="button"
+              onClick={() => setShowTaskDone(!showTaskDone)}
+            >
+              {showTaskDone
+                ? "Show tasks to do"
+                : "Show tasks done"}
+            </button>
+          </div>
+          <TasksForm />
+          <TasksList done={showTaskDone} />
+        </main>
+      </div>
     </div>
   );
 }

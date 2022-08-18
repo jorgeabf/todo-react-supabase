@@ -23,8 +23,8 @@ function Login() {
   }, [navigate]);
 
   return (
-    <>
-      <h1>Login Page</h1>
+    <main>
+      <h2>Login with Magic Link</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="email"
@@ -34,7 +34,7 @@ function Login() {
         />
         <button>Send</button>
       </form>
-    </>
+    </main>
   );
 }
 

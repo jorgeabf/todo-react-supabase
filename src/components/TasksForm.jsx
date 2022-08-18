@@ -17,8 +17,7 @@ function TasksForm() {
       style={{
         display: "flex",
         alignItems: "center",
-        gap: ".25em",
-        justifyContent: "center",
+        gap: "1em",
       }}
     >
       <input
@@ -28,7 +27,7 @@ function TasksForm() {
         onChange={(e) => setTaskName(e.target.value)}
         value={taskName}
       />
-      <button disabled={adding}>
+      <button disabled={adding} className="button">
         {adding ? "Adding..." : "Add"}
       </button>
     </form>
