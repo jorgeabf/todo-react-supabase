@@ -23,6 +23,7 @@ header {
    margin-bottom: 4em;
    display: flex;
    align-items: center;
+   flex-wrap: wrap;
    gap: 1em;
 }
 
@@ -49,7 +50,7 @@ header {
    background-color: var(--bg-dark);
    color: var(--primary);
    cursor: pointer;
-   transition: color .15s, background-color .2s;
+   transition: color 0.15s, background-color 0.2s;
 }
 
 .button:is(:hover, :active, :focus) {
@@ -61,7 +62,7 @@ header {
 .buttonDone {
    color: white;
    border: none;
-   opacity: .85;
+   opacity: 0.85;
 }
 
 .buttonDelete {
