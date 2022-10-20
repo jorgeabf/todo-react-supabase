@@ -1,5 +1,5 @@
 header {
-   background-color: var(--bg-05);
+   background-color: var(--blue-very-very-dark);
 }
 
 .nav-link {
@@ -8,7 +8,7 @@ header {
 }
 
 .nav-link--title {
-   font-size: calc(var(--font-size) * 1.75);
+   font-size: calc(var(--font-size) * 1.5);
 }
 
 .navbar {
@@ -22,6 +22,7 @@ header {
 .tasks-filter {
    margin-bottom: 4em;
    display: flex;
+   justify-content: space-between;
    align-items: center;
    flex-wrap: wrap;
    gap: 1em;
@@ -31,54 +32,31 @@ header {
    text-transform: uppercase;
 }
 
+.tasks-list {
+   width: 100%;
+   padding: 0;
+   margin: 2em 0;
+   list-style: none;
+   display: grid;
+   grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+   );
+   gap: 1em;
+}
+
+.task-card {
+   width: 100%;
+   padding: 1em;
+   border-radius: var(--border-radius);
+   text-transform: capitalize;
+   background: var(--blue-dark);
+   display: grid;
+   gap: 1em;
+}
+
 .button-group {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   gap: 1em;
-}
-
-.button {
-   padding: 0.5em 1em;
-   border: var(--border);
-   border-radius: var(--border-radius);
-   outline: none;
-   text-decoration: none;
-   font-family: var(--font-family);
-   font-size: var(--font-size);
-   font-weight: bold;
-   background-color: var(--bg-dark);
-   color: var(--primary);
-   cursor: pointer;
-   transition: color 0.15s, background-color 0.2s;
-}
-
-.button:is(:hover, :active, :focus) {
-   background-color: var(--primary);
-   color: var(--bg-10);
-}
-
-.buttonDelete,
-.buttonDone {
-   color: white;
-   border: none;
-   opacity: 0.85;
-}
-
-.buttonDelete {
-   background-color: hsl(0, 70%, 35%);
-}
-
-.buttonDelete:is(:hover, :active, :focus) {
-   background-color: hsl(0, 70%, 50%);
-   color: white;
-}
-
-.buttonDone {
-   background-color: hsl(120, 70%, 25%);
-}
-
-.buttonDone:is(:hover, :active, :focus) {
-   background-color: hsl(120, 70%, 40%);
-   color: white;
 }
