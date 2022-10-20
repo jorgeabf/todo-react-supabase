@@ -1,0 +1,39 @@
+.btn {
+   padding: var(--padding);
+   border: var(--border);
+   border-radius: var(--border-radius);
+   outline: none;
+   text-decoration: none;
+   font-family: var(--font-family);
+   font-size: var(--font-size);
+   font-weight: bold;
+   background-color: var(--bg-dark);
+   color: var(--blue-light);
+   cursor: pointer;
+   transition: color 0.15s, background-color 0.2s;
+}
+
+.btn:is(:hover, :active, :focus) {
+   background-color: var(--blue-light);
+   color: var(--blue-very-dark);
+}
+
+.btn.red {
+   color: var(--red);
+   border-color: var(--red);
+}
+
+.btn.red:is(:hover, :active, :focus) {
+   background-color: var(--red);
+   color: var(--blue-very-dark);
+}
+
+.btn.green {
+   color: var(--green);
+   border-color: var(--green);
+}
+
+.btn.green:is(:hover, :active, :focus) {
+   background-color: var(--green);
+   color: var(--blue-very-dark);
+}

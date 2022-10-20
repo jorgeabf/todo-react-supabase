@@ -3,40 +3,43 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TasksForm from "../components/TasksForm";
 import TasksList from "../components/TasksList";
+import Button from "../components/Button";
 
 function Home() {
-  const [showTaskDone, setShowTaskDone] = useState(false);
-  const navigate = useNavigate();
+   const [showTaskDone, setShowTaskDone] = useState(false);
+   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (!supabase.auth.user()) {
-      navigate("/login");
-    }
-  }, [navigate]);
+   useEffect(() => {
+      if (!supabase.auth.user()) {
+         navigate("/login");
+      }
+   }, [navigate]);
 
-  return (
-    <div>
-      <div className="container-90">
-        <main>
-          <div className="tasks-filter">
-            <h2 className="tasks-filter__title">
-              {showTaskDone ? "Tasks done" : "Tasks to do"}
-            </h2>
-            <button
-              className="button"
-              onClick={() => setShowTaskDone(!showTaskDone)}
-            >
-              {showTaskDone
-                ? "Show tasks to do"
-                : "Show tasks done"}
-            </button>
-          </div>
-          <TasksForm />
-          <TasksList done={showTaskDone} />
-        </main>
+   return (
+      <div>
+         <div className="container-90">
+            <main>
+               <div className="tasks-filter">
+                  <h2 className="tasks-filter__title">
+                     {showTaskDone
+                        ? "Tasks done"
+                        : "Tasks to do"}
+                  </h2>
+                  <Button
+                     onClick={() =>
+                        setShowTaskDone(!showTaskDone)
+                     }>
+                     {showTaskDone
+                        ? "Show tasks to do"
+                        : "Show tasks done"}
+                  </Button>
+               </div>
+               <TasksForm />
+               <TasksList done={showTaskDone} />
+            </main>
+         </div>
       </div>
-    </div>
-  );
+   );
 }
 
 export default Home;

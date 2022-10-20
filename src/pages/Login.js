@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../supabase/client";
 import { useNavigate } from "react-router-dom";
+import Button from "../components/Button";
+import Input from "../components/Input";
 
 function Login() {
    const [email, setEmail] = useState("");
@@ -29,13 +31,13 @@ function Login() {
                Login with Magic Link
             </h2>
             <form onSubmit={handleSubmit}>
-               <input
+               <Input
                   type="email"
                   name="email"
                   placeholder="youremail@site.com"
                   onChange={(e) => setEmail(e.target.value)}
                />
-               <button className="button">Send</button>
+               <Button className="button">Send</Button>
             </form>
          </main>
       </div>
