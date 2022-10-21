@@ -11,9 +11,9 @@ function TasksList({ done = false }) {
 
    function renderTasks() {
       if (loading) {
-         return <p>Loading...</p>;
+         return <p>Cargando...</p>;
       } else if (tasks.length === 0) {
-         return <p>No tasks found</p>;
+         return <p>No se han encontrado tareas</p>;
       } else {
          return (
             <ul className="tasks-list">

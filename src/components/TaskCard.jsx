@@ -15,17 +15,19 @@ function TaskCard({ task }) {
    return (
       <li className="task-card">
          <h3>{task.name}</h3>
-         <p>{task.done ? "Done ✅" : "Not done ❌"}</p>
+         <p>
+            {task.done ? "Completada ✅" : "Pendiente ❌"}
+         </p>
          <div className="button-group">
             <Button
                color="red"
                onClick={() => handleDelete()}>
-               Delete
+               Eliminar
             </Button>
             <Button
                color="green"
                onClick={() => handleToggleDone()}>
-               Done
+               Completada
             </Button>
          </div>
       </li>

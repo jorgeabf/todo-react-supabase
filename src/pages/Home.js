@@ -22,16 +22,16 @@ function Home() {
                <div className="tasks-filter">
                   <h2 className="tasks-filter__title">
                      {showTaskDone
-                        ? "Tasks done"
-                        : "Tasks to do"}
+                        ? "Tareas completadas"
+                        : "Tareas pendientes"}
                   </h2>
                   <Button
                      onClick={() =>
                         setShowTaskDone(!showTaskDone)
                      }>
                      {showTaskDone
-                        ? "Show tasks to do"
-                        : "Show tasks done"}
+                        ? "Ver Tareas pendientes"
+                        : "Ver Tareas completadas"}
                   </Button>
                </div>
                <TasksForm />

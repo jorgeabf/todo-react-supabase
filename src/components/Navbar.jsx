@@ -9,7 +9,7 @@ function Navbar() {
                <NavLink
                   to="/"
                   className="nav-link nav-link--title">
-                  Tasks App
+                  App de tareas
                </NavLink>
                <NavLink
                   to="/"
@@ -17,7 +17,7 @@ function Navbar() {
                   onClick={async () =>
                      await supabase.auth.signOut()
                   }>
-                  Logout
+                  Cerrar sesión
                </NavLink>
             </nav>
          </div>

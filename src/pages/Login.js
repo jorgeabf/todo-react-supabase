@@ -28,7 +28,7 @@ function Login() {
       <div className="container-90">
          <main>
             <h2 style={{ marginBottom: "2rem" }}>
-               Login with Magic Link
+               Iniciar sesión con Enlace Mágico
             </h2>
             <form onSubmit={handleSubmit}>
                <Input
@@ -37,7 +37,7 @@ function Login() {
                   placeholder="youremail@site.com"
                   onChange={(e) => setEmail(e.target.value)}
                />
-               <Button className="button">Send</Button>
+               <Button className="button">Enviar</Button>
             </form>
          </main>
       </div>
