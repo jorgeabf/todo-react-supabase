@@ -1,9 +1,9 @@
 function Page404() {
-  return (
-    <main>
-      <h1>Error 404. Not Found</h1>
-    </main>
-  );
+   return (
+      <main>
+         <h1>Error 404. Página no encontrada.</h1>
+      </main>
+   );
 }
 
-export default Page404
+export default Page404;

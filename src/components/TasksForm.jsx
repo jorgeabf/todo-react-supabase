@@ -17,12 +17,12 @@ function TasksForm() {
       <form onSubmit={handleSubmit}>
          <Input
             name="taskname"
-            placeholder="Write a task name"
+            placeholder="Escriba tarea"
             onChange={(e) => setTaskName(e.target.value)}
             value={taskName}
          />
          <Button disabled={adding}>
-            {adding ? "Adding..." : "Add"}
+            {adding ? "Añadiendo..." : "Añadir"}
          </Button>
       </form>
    );
