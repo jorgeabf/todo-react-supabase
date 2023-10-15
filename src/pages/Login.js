@@ -28,7 +28,7 @@ function Login() {
       <div className="container-90">
          <main>
             <h2 style={{ marginBottom: "2rem" }}>
-               Iniciar sesión con Enlace Mágico
+               Prueba Vercel !!!!. Iniciar sesión con Enlace Mágico
             </h2>
             <form onSubmit={handleSubmit}>
                <Input
